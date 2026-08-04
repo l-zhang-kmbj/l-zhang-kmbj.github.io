@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>zhang.kmbj 的个人主页</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-width: 560px;
+    width: 100%;
+    padding: 48px 40px;
+    text-align: center;
+  }
+  .avatar {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  h1 { font-size: 28px; color: #333; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 15px; margin-bottom: 28px; }
+  .section { text-align: left; margin-bottom: 28px; }
+  .section h2 {
+    font-size: 16px; color: #667eea;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px; margin-bottom: 14px;
+  }
+  .project {
+    padding: 12px 16px;
+    background: #f8f9ff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .project .name { font-weight: 600; color: #333; font-size: 15px; }
+  .project .desc { color: #777; font-size: 13px; margin-top: 4px; }
+  .links a {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 10px 22px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+  .links a:hover { transform: translateY(-2px); }
+  .btn-github { background: #24292e; color: #fff; }
+  .btn-bili { background: #fb7299; color: #fff; }
+  footer { margin-top: 32px; color: #bbb; font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">Z</div>
+    <h1>zhang.kmbj</h1>
+    <p class="subtitle">流体力学 / 格子玻尔兹曼方法（LBM）爱好者</p>
+
+    <div class="section">
+      <h2>👋 关于我</h2>
+      <p style="color:#555; font-size:14px; line-height:1.8;">
+        喜欢数值模拟和编程，主要用 Python 做一些流体力学和声学相关的仿真小项目。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🚀 我的项目</h2>
+      <div class="project">
+        <div class="name">D2G9 圆柱绕流</div>
+        <div class="desc">用郭照立老师文章里的 D2G9 模型做的一个圆柱绕流模拟</div>
+      </div>
+      <div class="project">
+        <div class="name">LBM 声场点声源</div>
+        <div class="desc">格子玻尔兹曼方法模拟声场中的点声源（配套 B 站视频代码）</div>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/2913317255" target="_blank" class="btn-github">GitHub</a>
+      <a href="https://www.bilibili.com" target="_blank" class="btn-bili">B 站</a>
+    </div>
+
+    <footer>由 GitHub Pages 驱动 · 2026</footer>
+  </div>
+</body>
+</html>
