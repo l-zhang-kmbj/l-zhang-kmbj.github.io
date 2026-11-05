@@ -1,102 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>zhang.kmbj 的个人主页</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  .card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    max-width: 560px;
-    width: 100%;
-    padding: 48px 40px;
-    text-align: center;
-  }
-  .avatar {
-    width: 96px; height: 96px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-  }
-  h1 { font-size: 28px; color: #333; margin-bottom: 8px; }
-  .subtitle { color: #888; font-size: 15px; margin-bottom: 28px; }
-  .section { text-align: left; margin-bottom: 28px; }
-  .section h2 {
-    font-size: 16px; color: #667eea;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 8px; margin-bottom: 14px;
-  }
-  .project {
-    padding: 12px 16px;
-    background: #f8f9ff;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  .project .name { font-weight: 600; color: #333; font-size: 15px; }
-  .project .desc { color: #777; font-size: 13px; margin-top: 4px; }
-  .links a {
-    display: inline-block;
-    margin: 0 8px;
-    padding: 10px 22px;
-    border-radius: 24px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: transform 0.2s;
-  }
-  .links a:hover { transform: translateY(-2px); }
-  .btn-github { background: #24292e; color: #fff; }
-  .btn-bili { background: #fb7299; color: #fff; }
-  footer { margin-top: 32px; color: #bbb; font-size: 12px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="zhang.kmbj 的个人主页与博客。关于流体力学、格子玻尔兹曼方法和 Python 数值模拟。">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>zhang.kmbj · 个人主页与博客</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="card">
-    <div class="avatar">Z</div>
-    <h1>zhang.kmbj</h1>
-    <p class="subtitle">流体力学 / 格子玻尔兹曼方法（LBM）爱好者</p>
-
-    <div class="section">
-      <h2>👋 关于我</h2>
-      <p style="color:#555; font-size:14px; line-height:1.8;">
-        喜欢数值模拟和编程，主要用 Python 做一些流体力学和声学相关的仿真小项目。
-      </p>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="./"><span class="monogram">Z</span> zhang.kmbj</a>
+      <nav aria-label="主导航"><a href="#projects">项目</a><a href="#notes">博客</a><a href="#about">关于</a></nav>
+      <a class="external" href="https://github.com/2913317255">GitHub ↗</a>
     </div>
-
-    <div class="section">
-      <h2>🚀 我的项目</h2>
-      <div class="project">
-        <div class="name">D2G9 圆柱绕流</div>
-        <div class="desc">用郭照立老师文章里的 D2G9 模型做的一个圆柱绕流模拟</div>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> ZHANG.KMBJ / 数值实验手记</p>
+        <h1 id="hero-title">用代码观察<br>流动与声音<span>。</span></h1>
+        <p class="intro">你好，我是 zhang.kmbj。我喜欢流体力学和编程，用 Python 做一些关于流动和声学的数值实验。</p>
+        <div class="actions"><a class="button" href="#projects">查看项目 <span>↓</span></a><a class="text-link" href="#notes">阅读博客 <span>↗</span></a></div>
       </div>
-      <div class="project">
-        <div class="name">LBM 声场点声源</div>
-        <div class="desc">格子玻尔兹曼方法模拟声场中的点声源（配套 B 站视频代码）</div>
+      <figure class="visual">
+        <div class="visual-top"><span><i></i> FLOW FIELD</span><span>FIG. 01</span></div>
+        <img src="./flow.svg" alt="多条流线从左侧绕过圆柱，在其右侧形成起伏的尾流示意">
+        <figcaption><span>圆柱绕流 · 流线示意</span><span>LBM / 2D</span></figcaption>
+      </figure>
+    </section>
+    <section class="section" id="projects" aria-labelledby="project-title">
+      <header class="section-heading"><div><p class="eyebrow">01 / PROJECTS</p><h2 id="project-title">模拟项目</h2></div><p>来自原主页的两项数值实验</p></header>
+      <div class="projects">
+        <article class="project">
+          <div class="project-art flow-mini"><svg viewBox="0 0 360 120" aria-hidden="true"><path d="M0 30H84C125 30 133 4 176 17S253 36 360 30M0 50H78C123 50 135 17 169 28S242 57 360 50M0 70H78C123 70 135 103 169 92S242 63 360 70M0 90H84C125 90 133 116 176 103S253 84 360 90"/><circle cx="150" cy="60" r="22"/></svg><span>01 / FLOW</span></div>
+          <div class="project-copy"><p class="tags">流体力学 <span>·</span> D2G9</p><h3>D2G9 圆柱绕流</h3><p>用郭照立老师文章中的 D2G9 模型模拟流体绕过圆柱的过程。</p><a class="text-link" href="./posts/cylinder.html">阅读相关笔记 ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-art wave-mini"><svg viewBox="0 0 360 120" aria-hidden="true"><circle cx="180" cy="62" r="10"/><circle cx="180" cy="62" r="24"/><circle cx="180" cy="62" r="41"/><circle cx="180" cy="62" r="58"/><circle cx="180" cy="62" r="76"/><circle cx="180" cy="62" r="96"/><path d="M0 62h360M180 0v120"/></svg><span>02 / ACOUSTICS</span></div>
+          <div class="project-copy"><p class="tags">计算声学 <span>·</span> LBM</p><h3>LBM 声场点声源</h3><p>用格子玻尔兹曼方法模拟声场中的点声源，原项目配有 B 站视频代码。</p><a class="text-link" href="./posts/acoustics.html">阅读相关笔记 ↗</a></div>
+        </article>
       </div>
-    </div>
-
-    <div class="links">
-      <a href="https://github.com/2913317255" target="_blank" class="btn-github">GitHub</a>
-      <a href="https://www.bilibili.com" target="_blank" class="btn-bili">B 站</a>
-    </div>
-
-    <footer>由 GitHub Pages 驱动 · 2026</footer>
-  </div>
+    </section>
+    <section class="section" id="notes" aria-labelledby="notes-title">
+      <header class="section-heading"><div><p class="eyebrow">02 / BLOG</p><h2 id="notes-title">实验笔记</h2></div><p>模型、参数与可视化</p></header>
+      <ul class="notes">
+        <li><a href="./posts/cylinder.html"><span class="note-index">01</span><span><strong>圆柱绕流实验，应该记录哪些参数？</strong><small>从雷诺数、计算域到可复现的结果。</small></span><span class="badge">示例 · 流体</span><span aria-hidden="true" class="arrow">↗</span></a></li>
+        <li><a href="./posts/acoustics.html"><span class="note-index">02</span><span><strong>如何观察点声源的传播？</strong><small>把声源、探针与边界反射分别看清楚。</small></span><span class="badge">示例 · 声学</span><span aria-hidden="true" class="arrow">↗</span></a></li>
+      </ul>
+    </section>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div><p class="eyebrow">03 / ABOUT</p><h2 id="about-title">关于我</h2></div>
+      <div><p>我是 zhang.kmbj，喜欢数值模拟和编程，主要用 Python 做流体力学和声学相关的仿真小项目。</p><a class="text-link" href="https://github.com/2913317255">在 GitHub 找到我 ↗</a></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>zhang.kmbj / 数值实验手记</span><a href="#main">回到顶部 ↑</a></footer>
 </body>
 </html>
